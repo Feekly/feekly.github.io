@@ -66,6 +66,10 @@
     color: #91bdd9;
 }
 
+#joinWrap .carouselText {
+    overflow: hidden;
+}
+
 .carouselImage img {
     border: 2px solid grey;
 }
