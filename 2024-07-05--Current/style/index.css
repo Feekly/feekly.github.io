@@ -1,0 +1,71 @@
+/* ***Primary card styling*** */
+.primaryLinksArea {
+    background-color: #f2e6c2;
+    padding: 8px;
+    min-height: 384px;
+
+    /* Background image */
+    background-image: url("../content/img/IRIZE_Banner.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.primaryLinksWrapper {
+    margin-top: 56px;
+}
+
+.primaryLinksWrapper h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+.primaryLinkCards {
+    margin-left: 48px;
+    margin-right: 48px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.pCardWrap {
+    flex-basis: 25%;
+    box-shadow: 6px 6px #a9d4e4;
+}
+
+.pCardWrap a {
+    text-decoration: none;
+}
+
+.pCard {
+    background-color: #91bdd9;
+    color: #8D0324;
+    padding: 16px;
+    min-width: 256px;
+    min-height: 128px;
+}
+
+.pCard:hover {
+    color: #ca0130;
+}
+
+.pCard h2 {
+    font-weight: 800;
+    text-align: center;
+}
+
+/* Specific to join org section */
+#joinWrap {
+    background-color: #8D0324;
+    background-image: url(../content/img/Background-Get-Involved.png);
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#joinWrap a {
+    color: #91bdd9;
+}
+
+.carouselImage img {
+    border: 2px solid grey;
+}
