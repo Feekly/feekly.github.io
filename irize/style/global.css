@@ -45,7 +45,7 @@
          url("../content/fonts/lazy_dog.ttf") format("truetype");
 }
 
-/* ***Basic Page Stying*** */
+/* ***Basic Page Styling*** */
 body {
     font-family: OpenSans, Helvetica, sans-serif;
     margin: 0;
@@ -80,6 +80,17 @@ h2.bigHead {
 .textOutline1 { /* for any text you want to apply an outline to */
     text-shadow: -3px -3px 0 #f4f4f4, 3px -3px 0 #f4f4f4, -3px 3px 0 #f4f4f4, 3px 3px 0 #f4f4f4;
 }
+
+.transparentOverlay {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+}
+
 
 /* ***NAVIGATION*** */
 /* AAA-level navigation */
@@ -192,15 +203,17 @@ color: black;
     background-color: #91bdd9;
     color: black;
     position: fixed;
+    box-shadow: -1px 0px 10px 10px rgba(100, 100, 100, 0.2);
     /*
     inset: 64px -400px 0 auto;
     */
     top: 64px;
-    right: -400px;
+    right: -420px;
     bottom: 0;
     display: grid;
     grid-template-rows: 70px 1fr 70px;
     transition: 0.5s;
+    z-index: 980; /* above most everything except the nav bar */
 }
 /*
 body.showCart .container{
@@ -209,7 +222,7 @@ body.showCart .container{
 }*/
 
 .pageCartAnimate { /* Cart animation, strategy borrowed from hamburger animation */
-    transform: translateX(-400px);
+    transform: translateX(-420px);
 }
 
 @media (max-width: 400px) { /* on mobile, take up 100% screen width, rather than a fixed pixel amount */
@@ -235,6 +248,27 @@ body.showCart .container{
     font-weight: 800;
     color: #8D0324;
 }
+
+.cartTab .btnCartMinus, .cartTab .btnCartPlus {
+    background-color: #8D0324;
+    color: white;
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 100%;
+    width: 24px;
+    height: 24px;
+}
+
+.cartTab .btnCartMinus:hover, .cartTab .btnCartPlus:hover {
+    background-color: #ca0130;
+    cursor: pointer;
+}
+
+.cartTab .btnCartMinus:active, .cartTab .btnCartPlus:active {
+    background-color: #7a041f;
+}
+
 .cartTab .cartBtn{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -247,7 +281,8 @@ body.showCart .container{
 }
 
 .cartTab .cartBtn #cartCheckOut{
-    background-color: #05c208;
+    background-color: #8D0324;
+    color: white;
     
 }
 .cartTab .cartBtn #cartClose{
@@ -272,10 +307,24 @@ body.showCart .container{
     border-width: 2px;
     border-color: grey;
     border-radius: 12px;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 0.3fr;
+    gap: 6px;
+}
+
+.cartItemImg {
+    margin: auto;
 }
 
 .cartItemName h2 {
-    font-size: 18px;
+    font-size: 20px;
+}
+
+.cartItemQuantity {
+    grid-column: span 2;
+    margin: auto;
 }
 
 /*

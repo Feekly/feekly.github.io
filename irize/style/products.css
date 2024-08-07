@@ -28,6 +28,25 @@
     padding: 16px;
 }
 
+.item button {
+    background-color: #8D0324;
+    color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-color: grey;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.item button:hover {
+    cursor: pointer;
+    background-color: #ca0130;
+}
+
+.item button:active {
+    background-color: #7a041f;
+}
+
 /* Responsive design for smaller screens */
 @media (max-width: 899px) {
     .listProducts {

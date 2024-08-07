@@ -10,6 +10,12 @@
     background-size: cover;
 }
 
+@media(max-width: 640px) {
+    .primaryLinksArea {
+        min-height: 98vh;
+    }
+}
+
 .primaryLinksWrapper {
     margin-top: 56px;
 }

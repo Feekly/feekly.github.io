@@ -36,6 +36,7 @@
                                 <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
                                 </svg>
+                                <span id="navCartQuant">0</span>
                             </div>
                         </a>
                         <a href="" aria-label="View Account">
@@ -71,6 +72,56 @@
                 </div>
                 this is the period test page
         </section>
+
+        <section>
+            <div id="pageCart" class="cartTab">
+                <h1>Shopping Cart</h1>
+
+                <!-- Cart items -->
+                <div id="cartItemsList" class="listCart">
+
+                    <div id="cartItem000" class="cartItem">
+                        <div class="cartItemImg">
+                            <img src="content/img/alwaysUltraThin.jpg" alt="Always Ultra Thin" width="84" height="84">
+                        </div>
+                        <div class="cartItemName">
+                            <h2>Always Ultra Thin</h2>
+                        </div>
+                        <div class="cartItemQuantity">
+                            <button type="button" class="btnCartMinus" id="">&minus;</button>
+                            <span class="cartQuantityNum">1</span>
+                            <button type="button" class="btnCartPlus" id="">&plus;</button>
+                        </div>
+                    </div>
+
+                    <div id="cartItem001" class="cartItem">
+                        <div class="cartItemImg">
+                            <img src="content/img/incognitoPads.jpg" alt="Incognito Pads" width="84" height="84">
+                        </div>
+                        <div class="cartItemName">
+                            <h2>Incognito Pads</h2>
+                        </div>
+                        <div class="cartItemQuantity">
+                            <button type="button" class="btnCartMinus" id="">&minus;</button>
+                            <span class="cartQuantityNum">1</span>
+                            <button type="button" class="btnCartPlus" id="">&plus;</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Cart Buttons -->
+                <div class="cartBtn">
+                    <button id="cartClose">CLOSE</button>
+                    <button id="cartCheckOut">CHECK OUT</button>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="transparentOverlay" id="transparentOverlayMain" style="display: none;"></div>
+
+
         <!-- Scripts -->
         <script src="js/global.js"></script>
     </body>
